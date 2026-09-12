@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CazaMonedas 5cnt</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f4f4;
+      color: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .contenedor {
+      width: 100%;
+      max-width: 500px;
+      padding: 30px 22px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 110px;
+      height: 110px;
+      object-fit: contain;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 32px;
+      color: #222;
+    }
+
+    .subtitulo {
+      margin: 15px auto 30px;
+      font-size: 18px;
+      line-height: 1.5;
+      color: #555;
+      max-width: 420px;
+    }
+
+    .tarjeta {
+      background: white;
+      border-radius: 22px;
+      padding: 25px 20px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .boton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 60px;
+      margin: 14px 0;
+      padding: 12px 20px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      transition: transform 0.2s;
+    }
+
+    .boton:active {
+      transform: scale(0.98);
+    }
+
+    .apple {
+      background: #111;
+    }
+
+    .google {
+      background: #4285F4;
+    }
+
+    .proximamente {
+      opacity: 0.65;
+      pointer-events: none;
+      cursor: default;
+    }
+
+    .texto-pequeno {
+      margin-top: 24px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    .moneda {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="contenedor">
+
+    <div class="moneda">🪙</div>
+
+    <h1>CazaMonedas 5cnt</h1>
+
+    <p class="subtitulo">
+      Descubre máquinas de monedas planas y encuentra nuevas monedas cerca de ti.
+    </p>
+
+    <section class="tarjeta">
+
+      <!-- APP STORE -->
+      <a
+        href="#"
+        class="boton apple proximamente"
+      >
+         Próximamente en App Store
+      </a>
+
+      <!-- GOOGLE PLAY -->
+      <a
+        href="#"
+        class="boton google proximamente"
+      >
+        ▶ Próximamente en Google Play
+      </a>
+
+    </section>
+
+    <p class="texto-pequeno">
+      Escanea, descubre y añade nuevas máquinas a la comunidad.
+    </p>
+
+  </main>
+
+</body>
+</html>
