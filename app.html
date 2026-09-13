@@ -64,30 +64,32 @@
     }
     
     .boton-appstore,
-    .boton-googleplay {
-      outline: none;
-      border: none;
-      background: transparent;
-      box-shadow: none;
-      -webkit-tap-highlight-color: transparent;
-      -webkit-appearance: none;
-      appearance: none;
-    }
-
-    .boton-appstore:focus,
-    .boton-googleplay:focus,
-    .boton-appstore:active,
-    .boton-googleplay:active {
-      outline: none;
-      border: none;
-      background: transparent;
-      box-shadow: none;
-    }
+.boton-googleplay {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
 
   </style>
 
 </head>
 
+<script>
+
+  function abrirAppStore() {
+    // Cuando tengamos el enlace real de Apple,
+    // lo pondremos aquí.
+    alert("Próximamente disponible en App Store");
+  }
+
+  function abrirGooglePlay() {
+    // Cuando tengamos el enlace real de Google Play,
+    // lo pondremos aquí.
+    alert("Próximamente disponible en Google Play");
+  }
+
+</script>
 
 <body>
 
@@ -109,25 +111,19 @@
       sustituiremos # por la URL de App Store.
     -->
 
-    <a
-      href="#"
-      class="boton-appstore"
-      aria-label="Próximamente en App Store"
-    ></a>
+   <div
+  class="boton-appstore"
+  role="button"
+  aria-label="App Store"
+  onclick="abrirAppStore()"
+></div>
 
-
-    <!--
-      BOTÓN GOOGLE PLAY
-
-      Cuando tengas el enlace real de Google Play,
-      sustituiremos # por la URL de Google Play.
-    -->
-
-    <a
-      href="#"
-      class="boton-googleplay"
-      aria-label="Próximamente en Google Play"
-    ></a>
+<div
+  class="boton-googleplay"
+  role="button"
+  aria-label="Google Play"
+  onclick="abrirGooglePlay()"
+></div>
 
   </main>
 
