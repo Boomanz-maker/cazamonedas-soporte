@@ -38,16 +38,6 @@
       DE LA IMAGEN
     */
 
-    .boton-appstore:focus,
-    .boton-googleplay:focus,
-    .boton-appstore:active,
-    .boton-googleplay:active {
-      outline: none;
-      border: none;
-      background: transparent;
-      box-shadow: none;
-    }
-
     .boton-appstore,
     .boton-googleplay {
       position: absolute;
@@ -71,6 +61,27 @@
 
     .boton-googleplay {
       right: 5%;
+    }
+    
+    .boton-appstore,
+    .boton-googleplay {
+      outline: none;
+      border: none;
+      background: transparent;
+      box-shadow: none;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .boton-appstore:focus,
+    .boton-googleplay:focus,
+    .boton-appstore:active,
+    .boton-googleplay:active {
+      outline: none;
+      border: none;
+      background: transparent;
+      box-shadow: none;
     }
 
   </style>
