@@ -32,10 +32,6 @@
     .boton-googleplay {
       position: absolute;
       display: block;
-      /*
-        Estas medidas están en porcentaje para que
-        funcionen en cualquier tamaño de pantalla.
-      */
       top: 78%;
       height: 6%;
       width: 44%;
@@ -59,11 +55,14 @@
     */
     .contador-visitas {
       text-align: center;
+      color: #B7FF00;
       margin: 20px 0 30px;
-      min-height: 20px;
+      font-size: 14px;
+      font-weight: bold;
     }
     .contador-visitas img {
-      max-width: 100%;
+      vertical-align: middle;
+      margin-left: 5px;
     }
   </style>
 </head>
@@ -101,6 +100,7 @@
   </main>
   <!-- CONTADOR DE VISITAS -->
   <div class="contador-visitas">
+👁️ Vistas:
 <!-- Contador de visitas https://counter.gratis BEGINN -->
 <a
   href="https://counter.gratis/?language=es&ID=b083eba5"
@@ -127,7 +127,7 @@
       + '&RES=' + screen.width + 'x' + screen.height
       + '&REF=' + encodeURIComponent(document.referrer)
       + '&LOC=' + encodeURIComponent(location.href)
-      + '&NAVI=' + encodeURIComponent(navigator.userAgent)
+      + '&NAVI=' + encodeURIComponent(navigator.userAgent);
   })(
     document.getElementById('cg_b083eba5'),
     'https://besucherzaehler.gratis/counter.php?ID=b083eba5&STYLE=0'
