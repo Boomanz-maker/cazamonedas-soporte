@@ -1,149 +1,139 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>CazaMonedas 5cnt</title>
-
   <style>
-
     * {
       box-sizing: border-box;
     }
-
     body {
       margin: 0;
       background: #071a00;
       font-family: Arial, Helvetica, sans-serif;
     }
-
     .pagina {
       position: relative;
       width: 100%;
       max-width: 700px;
       margin: 0 auto;
     }
-
     .imagen-app {
       display: block;
       width: 100%;
       height: auto;
     }
-
     /*
       ZONAS PULSABLES SOBRE LOS BOTONES
       DE LA IMAGEN
     */
-
     .boton-appstore,
     .boton-googleplay {
       position: absolute;
       display: block;
-
       /*
         Estas medidas están en porcentaje para que
         funcionen en cualquier tamaño de pantalla.
       */
-
       top: 78%;
       height: 6%;
       width: 44%;
-
       z-index: 10;
     }
-
     .boton-appstore {
       left: 5%;
     }
-
     .boton-googleplay {
       right: 5%;
     }
-    
     .boton-appstore,
-.boton-googleplay {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
+    .boton-googleplay {
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    /*
+      CONTADOR DE VISITAS
+    */
+    .contador-visitas {
+      text-align: center;
+      margin: 20px 0 30px;
+      min-height: 20px;
+    }
+    .contador-visitas img {
+      max-width: 100%;
+    }
   </style>
-
 </head>
-
 <script>
-
   function abrirAppStore() {
     window.location.href =
       "https://apps.apple.com/es/app/cazamonedas-5cnt/id6810556864";
   }
-
   function abrirGooglePlay() {
     alert("Próximamente disponible en Google Play");
   }
-
 </script>
-
 <body>
-
   <main class="pagina">
-
-    <!-- IMAGEN PRINCIPAL -->
-
-    <img
-      src="cazamonedas-app.png"
-      alt="CazaMonedas 5cnt"
-      class="imagen-app"
-    >
-
-
-    <!--
-      BOTÓN APP STORE
-
-      Cuando tengas el enlace real de Apple,
-      sustituiremos # por la URL de App Store.
-    -->
-
-   <div
+<!-- IMAGEN PRINCIPAL -->
+<img
+  src="cazamonedas-app.png"
+  alt="CazaMonedas 5cnt"
+  class="imagen-app"
+>
+<!-- BOTÓN APP STORE -->
+<div
   class="boton-appstore"
   role="button"
   aria-label="App Store"
   onclick="abrirAppStore()"
 ></div>
-
+<!-- BOTÓN GOOGLE PLAY -->
 <div
   class="boton-googleplay"
   role="button"
   aria-label="Google Play"
   onclick="abrirGooglePlay()"
 ></div>
-
-    <!-- CONTADOR DE VISITAS -->
-<div style="text-align:center; color:#B7FF00; margin:20px 0 30px; font-size:14px;">
-  👁️ Visitas: <span id="contador">...</span>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
-
+  </main>
+  <!-- CONTADOR DE VISITAS -->
+  <div class="contador-visitas">
+<!-- Contador de visitas https://counter.gratis BEGINN -->
+<a
+  href="https://counter.gratis/?language=es&ID=b083eba5"
+  target="_top"
+>
+  <img
+    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+    id="cg_b083eba5"
+    alt="Contador de visitas"
+    title="Estadísticas del contador"
+  >
+</a>
+<noscript>
+  <img
+    src="https://besucherzaehler.gratis/counter.php?ID=b083eba5&STYLE=0"
+    alt="Contador de visitas"
+    title="Estadísticas del contador"
+  >
+</noscript>
 <script>
-  const counter = new Counter({
-    workspace: 'cazamonedas5cnt'
-  });
-
-  counter.up('visitas')
-    .then(result => {
-      document.getElementById('contador').textContent = result.value;
-    })
-    .catch(error => {
-      console.error('Error contador:', error);
-      document.getElementById('contador').textContent = '—';
-    });
+  (function(i,c){
+    i.src = c
+      + '&LANG=' + encodeURIComponent(navigator.language)
+      + '&RES=' + screen.width + 'x' + screen.height
+      + '&REF=' + encodeURIComponent(document.referrer)
+      + '&LOC=' + encodeURIComponent(location.href)
+      + '&NAVI=' + encodeURIComponent(navigator.userAgent)
+  })(
+    document.getElementById('cg_b083eba5'),
+    'https://besucherzaehler.gratis/counter.php?ID=b083eba5&STYLE=0'
+  );
 </script>
-
+<!-- Contador de visitas https://counter.gratis ENDE -->
+  </div>
 </body>
-
 </html>
