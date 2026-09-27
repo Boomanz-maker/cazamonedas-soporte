@@ -122,23 +122,27 @@
   onclick="abrirGooglePlay()"
 ></div>
 
-    </main>
+    <!-- CONTADOR DE VISITAS -->
+<div style="text-align:center; color:#B7FF00; margin:20px 0 30px; font-size:14px;">
+  👁️ Visitas: <span id="contador">...</span>
+</div>
 
-  <!-- CONTADOR DE VISITAS -->
-  <div style="text-align:center; color:#B7FF00; margin:20px 0 30px; font-size:14px;">
-    👁️ Visitas: <span id="contador">...</span>
-  </div>
+<script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
 
-  <script>
-    fetch('https://api.counterapi.dev/v1/cazamonedas5cnt/visitas/up')
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('contador').textContent = data.count;
-      })
-      .catch(() => {
-        document.getElementById('contador').textContent = '—';
-      });
-  </script>
+<script>
+  const counter = new Counter({
+    workspace: 'cazamonedas5cnt'
+  });
+
+  counter.up('visitas')
+    .then(result => {
+      document.getElementById('contador').textContent = result.value;
+    })
+    .catch(error => {
+      console.error('Error contador:', error);
+      document.getElementById('contador').textContent = '—';
+    });
+</script>
 
 </body>
 
